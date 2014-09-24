@@ -1,0 +1,27 @@
+<h1> Bienvenido a Critter </h1>
+
+<div class="row">
+  <div class="col-md-8">
+  	<p>Éste sitio web, contiene muchos tweets de monstruos. Wiiiiiiiiiii!</p>
+  </div>
+  <div class="col-md-4">
+  	<h3> ¿Qué desea hacer? </h3>
+	<ul>  
+		<li> <%= link_to "Listado de Monstruos", monstruos_path %></li>
+		<li> <%= link_to "Ver el primer monstruo", ver_monstruos_path %></li>
+	</ul>
+  </div>
+</div>
+<footer>
+	<div class="row">
+		<div class="col-md-4">
+			<p><%= link_to "Facebook", "http://facebook.com", class:"btn btn-primary" %></p>
+		</div>
+	  	<div class="col-md-4">
+	  		<p><%= link_to "Twitter", "http://twitter.com", class:"btn btn-primary" %></p>
+	  	</div>
+	  	<div class="col-md-4">
+	  		<p><%= link_to "Correo", "email#{}", class:"btn btn-primary" %></p>
+	  	</div>
+	</div>
+</footer>

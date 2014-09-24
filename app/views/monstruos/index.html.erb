@@ -1,0 +1,19 @@
+<!------------------------------------------------------ 
+Acá va a ir el listado de monstruos usando los tags  
+<ul> y <li>.
+Debe tener un título y mostrar el nombre (en negrita) y
+la descripción.
+------------------------------------------------------>
+<h1>Lista de monstruos</h1>
+<ul>
+	<% Monstruo.order(nombre: :asc).all.each do |monstruo| %>
+	<li><h3><%= link_to monstruo.nombre, monstruo %>
+		<% if (monstruo.tweets.count>1) %>
+			<span class="cstar">CritterStar!</span>
+		<% end %>
+		</h3>
+		<span class="desc"><%= monstruo.descripcion %></span>
+		<span><%= link_to "Eliminar", monstruo, method: :delete, class:"btn btn-danger btn-xs" %></span>
+	</li>
+	<% end %>
+</ul>
